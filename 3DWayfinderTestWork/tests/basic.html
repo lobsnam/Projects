@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>project</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body ng-app="basictest" ng-controller="BasicController">
+	<canvas id="map" width="300" height="150" ></canvas>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+	<script type="text/javascript" src="http://static.3dwayfinder.com/projects/shared/js/minified/frak-stable.min.js"></script>
+	<script type="text/javascript" src="http://static.3dwayfinder.com/projects/shared/js/minified/Wayfinder3D.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+	<script type="text/javascript" src="../index.js"></script>
+	
+
+	<div id="advertisements" template="default" wf-banner class="banner"></div>
+
+	<script>
+		var app = angular.module('basictest', ['wfangular']);
+		app.run(['wfangular', function(wayfinder) {
+			WayfinderAPI.LOCATION = "http://api.3dwayfinder.com/";
+			wayfinder.options.assetsLocation = 'http://static.3dwayfinder.com/shared/';
+			wayfinder.open("demo");
+		}]);
+	</script>
+	
+        <table>
+            <tr>
+                <td>
+                    <div id='one'>
+                        <ul>
+                        <li class = 'section' id = 'beauty' ><img src="images/beauty.png">  HAIR & BEAUTY</li>
+                        <li class = 'beauty' >Location 1</a></li>
+                        <li class = 'beauty' >Location 2</li>
+                        <li class = 'beauty' >Location 3</li>
+                        <li class = 'beauty' >Location 4</li>
+                        <li class = 'beauty' >Location 5</li>
+                        <li class = 'beauty' >Location 6</li>
+                        <li class = 'beauty' >Location 7</li>
+                        </ul>
+                    </div>
+                </td>
+                <td>
+                    <div id='two'>
+                        <ul>
+                        <li class = 'beauty' >Location 8</li>
+                        <li class = 'beauty' >Location 9</li>
+                        <li class = 'beauty' >Location 10</li>
+                        <li class = 'section' id = 'eating' ><img src="images/eating.png">  FOOD</li>
+                        <li class = 'eating' >Location 1</li>
+                        <li class = 'eating' >Location 2</li>
+                        <li class = 'eating' >Location 3</li>
+                        </ul>
+                    </div>
+                </td>
+                <td>
+                    <div id='three'>
+                        <ul>
+                        <li class = 'eating' ><b>Location 4</b></li>
+                        <li class = 'eating' >Location 5</li>
+                        <li class = 'eating' >Location 6</li>
+                        <li class = 'eating' >Location 7</li>
+                        <li class = 'eating' >Location 8</li>
+                        <li class = 'section' id = 'service' ><img src="images/service.jpeg">  SERVICES</li>
+                        <li class='service'>Location 1</li>  
+                        </ul>
+                    </div>
+                </td>
+                <td>
+                    <div id='four'>
+                        <ul>
+                        <li class = 'service'>Location 2</li>
+                        <li class = 'section' id = 'shoe'><img src="images/shoe.png">  SHOES</li>
+                        <li class = 'shoe'>Location 1</li>
+                        <li class = 'shoe'>Location 2</li>
+                        <li class = 'shoe'>Location 3</li>
+                        <li class = 'shoe'>Location 4</li>
+                        <li class = 'shoe'>Location 5</li> 
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+        </table>
+</div>
+</div>
+</body>
+</html>
